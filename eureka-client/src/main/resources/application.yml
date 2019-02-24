@@ -1,0 +1,9 @@
+spring:
+  profiles:
+    active: dev
+  application:
+    name: service-eureka
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8090/eureka/
