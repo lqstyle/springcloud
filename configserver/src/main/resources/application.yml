@@ -1,0 +1,18 @@
+server:
+  port: 8097
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/lqstyle/springcloud-config.git
+          searchPaths: respo
+          username: lqstyle
+          password: lq199207
+      label: master
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8090/eureka/
