@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  * @date 24/02/2019 10:30 上午
  * @Description
  */
-@FeignClient(value = "service-eureka")
+@FeignClient(value = "service-eureka", fallback = ScheduleServiceHiHystric.class)
 public interface ScheduleService {
 
   @RequestMapping(value = "/eureka/hello", method = RequestMethod.GET)
